@@ -1,32 +1,33 @@
 <div class="d-flex flex-column">
     <h1 class="fw-normal fs-4">Cadastrar - Agendamento de Potenciais Clientes</h1>
     <p class="fs-6">Sistema Utilizado para agendamneto de serviços</p>
-    <form>
-  <div class="mb-3">
-    <label for="exampleInputNome" class="form-label">Nome:</label>
-    <input type="text" class="form-control" id="exampleInputNome" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputTelefone" class="form-label">Telefone:</label>
-    <input type="tel" class="form-control" id="exampleInputTelefone">
-  </div>
-   <div class="mb-3">
-      <label for="exampleInputOrigem" class="form-label">Origem:</label>
-      <select id="exampleInputOrigem" class="form-select">
-        <option>Celular</option>
-      </select>
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputDataContato" class="form-label">Data do Contato:</label>
-    <input type="date" class="form-control" id="exampleInputDataContato">
-  </div>
-  <div class="mb-3"> 
-      <label class="mb-2">Observações:</label>
-      <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">
-      </textarea>
-      </div>
-  </div>
-  <button class="btn btn-primary" type="submit">Cadastrar</button>
-</form>
+    <form action="/cadastrar" method="POST">
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Nome:</label>
+                        <input type="name" name="nome" class="form-control" id="nome">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Telefone:</label>
+                        <input type="number" name="telefone" class="form-control" id="telefone">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Origem:</label>
+                        <select name="origem" class="form-select" aria-label="Default select example">
+                            <option value="celular" selected>Celular</option>
+                            <option value="whatsapp">Whatsapp</option>
+                            <option value="telefone_fixo">Telefone Fixo</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Data do Contato:</label>
+                        <input type="date" name="data_contato" class="form-control" id="data_contato" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Observação:</label>
+                        <textarea name="observacao" class="form-control" placeholder="" id="observacao" style="height: 100px"></textarea>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
 </div>
